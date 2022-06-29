@@ -1,4 +1,4 @@
-var _CONTENT = [ "HowToHub", "Hub?", "How?", "HowToHub" ];
+var _CONTENT = [ "HowToHub", "HTH",];
 
 var _PART = 0;
 

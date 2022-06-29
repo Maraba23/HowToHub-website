@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #18182c;
+    font-size: 14px;
+    color: #151515;
+}
+/* ======================== */
+.container{
+    margin: 0 auto; /*Center the container horizontally in the middle of the page.*/
+    padding: 12px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-size: x-large;
+}
+.navbar{
+    display: flex;
+    flex-wrap: wrap; /*Allows the children inside a flex container to wrap down onto the next line if there is not enough space.*/
+    flex-direction: row; /*The children inside a flex container are placed in a row.*/
+    align-items: center; /*Centers the children of a flex container vertically.*/
+    justify-content: space-around; /*Adds space between each child of a flex container.*/
+    background-color: rgb(26, 25, 25);
+    padding-block: 15px;
+    color: white;
+}
+.navbar a{
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.logo{
+    margin-right: 50px;
+}
+.list{
+    list-style: none;
+    display: flex;
+    gap: 25px; /*Applies right and bottom spacing between children inside a flex or grid container.*/
+}
+#toggler,
+.navbar label{
+    display: none;/*Hide the checkbox and label on large screens.*/
+}
+/*Breakpoint set at 600px, once it is 600px or smaller the layout changes to use the following styles overriding the old ones.*/
+@media screen and 
+(max-width: 660px){
+    .menu{
+        width: 100%;
+        max-height: 0; /*Makes the max-height 0 to side the expanded menu.*/
+        overflow: hidden; /*Hides the overflowing content.*/
+    }
+    .list{
+        flex-direction: column; /*Chances the direction of the flex container. By default it is a row so we change it to column in small screens.*/
+        align-items: center;
+        padding: 20px;
+    }
+    .navbar label{
+        display: inline-flex; /*Makes it an inline flex container for the icon. Used for centering the icon inside this box.*/
+        align-items: center;
+        cursor: pointer;
+    }
+    /* 
+        The general sibling selector (~) selects all elements that are next siblings of #toggler.
+        In this case we target the .menu and we turn the height back to 100% to show the menu.
+    */
+    #toggler:checked ~ .menu{
+        max-height: 100%;
+    }
+}
+
+
+.img-logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 25px;
+}
+
+
+.button-28 {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #747373;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
