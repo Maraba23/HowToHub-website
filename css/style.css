@@ -132,4 +132,30 @@ body{
 .button-28:active {
   box-shadow: none;
   transform: translateY(0);
+  
 }
+
+
+.button-28{
+    color: #fff;
+    animation: first_color .5s ease-in-out infinite alternate;
+ 
+    /*Since the icons share similar animation properties we will just add it here then change the animation name.*/
+}
+
+
+/*To achieve this neon effect we will layer 3 shadows each one with an increment of 10 for the blur. */
+/* At the first stop the glow will be larger than the last stop. This way we create a growing effect as it cycles thru. */
+@keyframes first_color {
+    0% {
+        text-shadow: 0 0 10px #150194,
+            0 0 20px #4333A6, 0 0 30px #285AEB
+    }
+
+    100% {
+        text-shadow: 0 0 5px #150194,
+            0 0 10px #4333A6, 0 0 15px #285AEB
+    }
+}
+
+
